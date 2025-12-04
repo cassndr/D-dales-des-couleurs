@@ -1,4 +1,25 @@
+/* --- STYLE GLOBAL --- */
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
 
+h1, h2 {
+    color: #C8A343;
+    text-decoration: underline;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* --- HEADER --- */
+header {
+    padding: 20px;
 }
 
 header img {
