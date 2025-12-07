@@ -1,10 +1,10 @@
 /* Base de Couleurs et Typographie */
 :root {
-    --color-dark: #1e1e1e;
-    --color-gold: #d4af37;
-    --color-text-light: #f4f4f4;
-    --color-text-dark: #333;
-    --color-image-bg: #ccc;
+    --color-dark: #1e1e1e; /* Fond principal (très foncé) */
+    --color-gold: #d4af37; /* Couleur Or/Jaune (pour les barres et titres) */
+    --color-text-light: #f4f4f4; /* Texte clair sur fond foncé */
+    --color-text-dark: #333; /* Texte sombre (pour les liens sur fond gold) */
+    --color-image-bg: #ccc; /* Fond gris clair pour les cadres d'images */
 }
 
 /* Réinitialisation de base et styles Mobile-First */
@@ -41,31 +41,42 @@ h1, h2, h3 {
 .section-title h2 { color: var(--color-dark); font-size: 1.8em; text-decoration: underline; }
 
 /* ============================================== */
-/* CORRECTION DES RAPPORTS D'ASPECT DES IMAGES */
+/* GESTION DES RAPPORTS D'ASPECT DES CADRES (CORRIGÉ) */
 /* ============================================== */
 
-.content-image, .artwork-image, .poster-image { width: 100%; height: 100%; object-fit: cover; display: block; }
-.image-container, .image-wrapper, .poster-wrapper { position: relative; background-color: var(--color-image-bg); }
-.image-container img, .image-wrapper img, .poster-wrapper img { position: absolute; top: 0; left: 0; }
+.content-image, .artwork-image, .poster-image { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Assure que l'image couvre le cadre sans déformation excessive */
+    display: block; 
+}
+.image-container, .image-wrapper, .poster-wrapper { 
+    position: relative; 
+    background-color: var(--color-image-bg); 
+}
+.image-container img, .image-wrapper img, .poster-wrapper img { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+}
 
-/* Image 1 (Galerie, Grande) : Ajusté pour être plus large et moins haut que 2:1 */
+/* Image 1 (Galerie, Grande) : Ajusté pour être plus large que haut */
 .aspect-ratio-1 { padding-top: 45%; width: 90%; margin: 0 auto 20px; }
 
-/* Image 2 (Galerie, Petite) : Ajusté pour être moins haut que 4:3 */
+/* Image 2 (Galerie, Petite) : Ajusté pour être moins large que haut */
 .aspect-ratio-2 { padding-top: 60%; width: 90%; margin: 20px auto; }
 
-/* Oeuvre 1 (Grande) : Ajusté pour être plus carré, comme dans la maquette */
+/* Oeuvre 1 (Grande) : Ajusté pour être plus carré */
 .large-wrapper { padding-top: 60%; width: 90%; margin: 0 auto 10px; }
 
 /* Oeuvres 2, 3, 4 (Petites) : Carré */
 .small-wrapper { padding-top: 100%; }
 
-/* Oeuvres 5, 6 (Moyennes) : Ajusté pour être plus haut que 2:1 */
+/* Oeuvres 5, 6 (Moyennes) : Ajusté pour être légèrement plus haut que large */
 .medium-wrapper-5, .medium-wrapper-6 { padding-top: 65%; }
 
 /* Affiches (Verticales) : Ajusté pour être plus grand/étroit (type poster) */
 .poster-wrapper { padding-top: 170%; } 
-
 
 /* --- Reste du CSS (inchangé) --- */
 .gallery-content { padding: 0 5%; }
@@ -84,8 +95,9 @@ h1, h2, h3 {
 .contact-form { display: flex; flex-direction: column; gap: 10px; }
 .contact-form input[type="email"] { padding: 10px; border: 1px solid var(--color-gold); background-color: var(--color-dark); color: var(--color-text-light); font-size: 1em; }
 .contact-form button { padding: 10px; background-color: var(--color-gold); color: var(--color-dark); border: none; cursor: pointer; font-weight: bold; transition: background-color 0.3s; }
+.contact-form button:hover { background-color: #e6c05d; }
+.contributors-container p { margin: 5px 0; font-size: 0.9em; }
 .copyright { text-align: center; color: #666; margin-top: 30px; font-size: 0.8em; }
-
 
 /* MEDIA QUERY : DESKTOP/TABLET (min-width: 768px) */
 @media (min-width: 768px) {
