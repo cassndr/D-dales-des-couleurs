@@ -3,85 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dédales des Couleurs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Dédales des couleurs - Galerie d'art expressioniste</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <img src="logo.png" alt="Logo D&C">
-        <h1>Dédales des couleurs</h1>
-        <p>Galerie d’art expressionniste</p>
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="Logo D&C - Dédales des couleurs" class="logo">
+        </div>
+        
+        <h1 class="main-title">Dédales des couleurs</h1>
+        <p class="main-subtitle">Galerie d'art expressioniste</p>
     </header>
 
-    <nav>
-        <a href="#galerie">La Galerie</a>
-        <a href="#oeuvres">Les œuvres</a>
-        <a href="#expositions">Exposition à venir</a>
+    <nav class="main-nav">
+        <a href="#galerie" class="nav-item">La Galerie</a>
+        <span class="separator">|</span>
+        <a href="#oeuvres" class="nav-item">Les œuvres</a>
+        <span class="separator">|</span>
+        <a href="#exposition" class="nav-item">Exposition à Venir</a>
     </nav>
+    
+    <section id="galerie" class="content-section">
+        <div class="section-title gold-bg">
+            <h2>La Galerie</h2>
+        </div>
 
-    <section id="galerie" class="galerie">
-        <h2>La Galerie</h2>
-        <div class="row">
-            <img src="image1.jpg" alt="Image 1">
-            <p>Située à deux pas de la Tour Eiffel, le Dédale des Couleurs est une galerie parisienne dédiée à l’art expressionniste...</p>
-        </div>
-        <div class="row">
-            <p>Au Dédale des Couleurs, l’expression prime sur la perfection. Les artistes exposent la force de l’âme...</p>
-            <img src="image2.jpg" alt="Image 2">
-        </div>
-    </section>
-
-    <section id="oeuvres" class="oeuvres">
-        <h2>Les œuvres</h2>
-        <div>
-            <img src="oeuvre1.jpg" alt="Œuvre 1" class="grande">
-            <p>Œuvre 1 — Nom de l'œuvre</p>
-        </div>
-        <div class="petites">
-            <img src="oeuvre2.jpg" alt="Œuvre 2">
-            <img src="oeuvre3.jpg" alt="Œuvre 3">
-            <img src="oeuvre4.jpg" alt="Œuvre 4">
-        </div>
-        <div class="moyennes">
-            <img src="oeuvre5.jpg" alt="Œuvre 5">
-            <img src="oeuvre6.jpg" alt="Œuvre 6">
-        </div>
-    </section>
-
-    <section id="expositions" class="expositions">
-        <h2>Exposition à venir</h2>
-        <div class="affiches">
-            <div>
-                <img src="affiche1.jpg" alt="Affiche 1">
-                <p><strong>Nom de l’exposition</strong><br>Date</p>
+        <div class="gallery-content">
+            
+            <div class="gallery-block block-top">
+                <div class="image-container aspect-ratio-1">
+                    <img src="Image 1.jpeg" alt="Vue intérieure de la galerie" class="content-image">
+                </div>
+                
+                <div class="text-block">
+                    <p>Située à deux pas de la Tour Eiffel, Dédales des Couleurs est une galerie entièrement dédiée à l'art expressionniste. Entre lumières et silence, ce lieu invite à un voyage sensoriel où chaque mur devient émotion. Pousser contre un laboratoire esthétique, la galerie plonge le visiteur dans un univers coloré où les éclats de la matière traduisent les états d'âme humains.</p>
+                </div>
             </div>
-            <div>
-                <img src="affiche2.jpg" alt="Affiche 2">
-                <p><strong>Nom de l’exposition</strong><br>Date</p>
+
+            <div class="gallery-block block-bottom">
+                <div class="text-block text-left">
+                    <p>Au Dédale des Couleurs, l'expression prime sur la perfection. Les artistes explorent la force du geste, l'intensité du ressenti et la beauté du désordre. Couleurs brutes, lignes expressives, formes tourmentées : chaque œuvre révèle une émotion à vif. La galerie célèbre la liberté créatrice et la puissance de la couleur comme miroir de l'âme.</p>
+                </div>
+
+                <div class="image-container aspect-ratio-2">
+                    <img src="Image 2.jpeg" alt="Détail d'une œuvre expressionniste" class="content-image">
+                </div>
             </div>
-            <div>
-                <img src="affiche3.jpg" alt="Affiche 3">
-                <p><strong>Nom de l’exposition</strong><br>Date</p>
-            </div>
+
         </div>
     </section>
 
-    <section class="contact">
-        <h2>Restons en contact !</h2>
-        <p>Inscrivez-vous :</p>
-        <form>
-            <input type="email" placeholder="Adresse mail">
-            <button type="submit">S’inscrire</button>
-        </form>
-        <p style="font-size:0.8em;">Format attendu : nom@domaine.fr</p>
+    <section id="oeuvres" class="content-section">
+        <div class="section-title gold-bg">
+            <h2>Les œuvres</h2>
+        </div>
+
+        <div class="artworks-grid">
+            
+            <div class="artwork-item artwork-large">
+                <div class="image-wrapper large-wrapper">
+                    <img src="Oeuvre 1.jpeg" alt="Oeuvre 1" class="artwork-image">
+                </div>
+                <p class="artwork-name">Nom de l'œuvre</p>
+            </div>
+
+            <div class="row-small-artworks">
+                <div class="artwork-item artwork-small">
+                    <div class="image-wrapper small-wrapper">
+                        <img src="Oeuvre 2.jpeg" alt="Oeuvre 2" class="artwork-image">
+                    </div>
+                    <p class="artwork-name">Nom de l'œuvre</p>
+                </div>
+                <div class="artwork-item artwork-small">
+                    <div class="image-wrapper small-wrapper">
+                        <img src="Oeuvre 3.jpeg" alt="Oeuvre 3" class="artwork-image">
+                    </div>
+                    <p class="artwork-name">Nom de l'œuvre</p>
+                </div>
+                <div class="artwork-item artwork-small">
+                    <div class="image-wrapper small-wrapper">
+                        <img src="Oeuvre 4.jpeg" alt="Oeuvre 4" class="artwork-image">
+                    </div>
+                    <p class="artwork-name">Nom de l'œuvre</p>
+                </div>
+            </div>
+
+            <div class="row-medium-artworks">
+                <div class="artwork-item artwork-medium">
+                    <div class="image-wrapper medium-wrapper-5">
+                        <img src="Oeuvre 5.jpeg" alt="Oeuvre 5" class="artwork-image">
+                    </div>
+                    <p class="artwork-name">Nom de l'œuvre</p>
+                </div>
+                <div class="artwork-item artwork-medium">
+                    <div class="image-wrapper medium-wrapper-6">
+                        <img src="Oeuvre 6.jpeg" alt="Oeuvre 6" class="artwork-image">
+                    </div>
+                    <p class="artwork-name">Nom de l'œuvre</p>
+                </div>
+            </div>
+            
+        </div>
     </section>
 
-    <footer>
-        <p>HADDAR Farise – DAMOUCHE Sofiane – AL KHEIDER Line – MARCHAND Cassandre</p>
-        <img src="mairie.png" alt="Logo Mairie de Paris">
-    </footer>
+    <section id="exposition" class="content-section">
+        <div class="section-title gold-bg">
+            <h2>Exposition à Venir</h2>
+        </div>
+
+        <div class="poster-grid">
+            <div class="poster-item">
+                <div class="poster-wrapper">
+                    <img src="Affiche 1.jpeg" alt="Affiche d'exposition à venir 1" class="poster-image">
+                </div>
+            </div>
+            <div class="poster-item">
+                <div class="poster-wrapper">
+                    <img src="Affiche 2.jpeg" alt="Affiche d'exposition à venir 2" class="poster-image">
+                </div>
+            </div>
+            <div class="poster-item">
+                <div class="poster-wrapper">
+                    <img src="Affiche 3.jpeg" alt="Affiche d'exposition à venir 3" class="poster-image">
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
